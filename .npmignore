@@ -2,3 +2,4 @@ test
 .git*
 bower.json
 .travis.yml
+.DS_Store
