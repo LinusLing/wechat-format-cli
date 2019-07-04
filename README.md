@@ -2,6 +2,15 @@
 
 转化 Markdown 到给微信特制的 HTML（受 [微信公众号排版编辑器](https://github.com/lyricat/wechat-format) 的启发，刚好自己又有这个需求）
 
+## 如何使用
+
+1. 打开 Terminal
+2. 执行如下脚本
+<pre>
+npm install wechat-format-cli && cd ./node_modules/wechat-format-cli && npm start <b>your_md_path.md</b>
+</pre>
+3. Ctrl/Command + V 到微信公众号编辑器
+
 ## 优点
 
 - 继承了[微信公众号排版编辑器](https://github.com/lyricat/wechat-format)的优点（当然也有 bug。。）
