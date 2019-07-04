@@ -4,6 +4,8 @@
 
 ## 如何使用
 
+> 前提：确保已经安装 npm。[如何安装 npm（安装 node.js 会自带 npm）](http://www.runoob.com/nodejs/nodejs-install-setup.html)
+
 1. 打开 Terminal
 2. 执行如下脚本
 <pre>
