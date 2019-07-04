@@ -1,4 +1,4 @@
-# 微信公众号排版编辑器 (wechat-format-cli)
+# 微信公众号排版编辑器 (wechat-format-cli) ![](https://travis-ci.org/LinusLing/wechat-format-cli.svg?branch=master)
 
 转化 Markdown 到给微信特制的 HTML（受 [微信公众号排版编辑器](https://github.com/lyricat/wechat-format) 的启发，刚好自己又有这个需求）
 

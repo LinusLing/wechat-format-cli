@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Linus Ling",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LinusLing/wechat-format-cli.git"
+  },
   "dependencies": {
     "clipboardy": "^2.1.0",
     "marked": "^0.6.3",
@@ -19,4 +21,10 @@
     "format",
     "cli"
   ],
+  "author": "Linus Ling",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LinusLing/wechat-format-cli/issues"
+  },
+  "homepage": "https://github.com/LinusLing/wechat-format-cli#readme"
 }
