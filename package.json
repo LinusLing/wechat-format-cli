@@ -1,6 +1,6 @@
 {
   "name": "wechat-format-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for transferring markdown contents to wechat html format and then can paste formatted html to wechat editor.",
   "main": "transfer.js",
   "scripts": {
