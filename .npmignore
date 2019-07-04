@@ -1,0 +1,4 @@
+test
+.git*
+bower.json
+.travis.yml
