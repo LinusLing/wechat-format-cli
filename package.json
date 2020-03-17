@@ -14,7 +14,7 @@
   "dependencies": {
     "clipboardy": "^2.1.0",
     "marked": "^0.6.3",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.2"
   },
   "keywords": [
     "markdown",
