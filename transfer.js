@@ -1,9 +1,9 @@
 const fs = require('fs')
 const path = require('path');
 const marked = require('marked');
-const clipboardy = require('clipboardy');
 const defaultTheme = require("./assets/scripts/themes/default.js");
 const WxRenderer = require("./assets/scripts/renderers/wx-renderer.js");
+const puppeteer = require('puppeteer');
 
 var argv = require('minimist')(process.argv.slice(2));
 
@@ -20,15 +20,56 @@ let wxRenderer = new WxRenderer({
 	size: '16px'
 });
 
-fs.readFile(input, 'utf8', (err, source) => {
-  	var output = marked(source, { renderer: wxRenderer.getRenderer() })
-	if (wxRenderer.hasFootnotes()) {
-		output += wxRenderer.buildFootnotes()
-	}
-	// Copy wx-format html to clipboard.
-	clipboardy.write(output).then(res => {
-		console.log("Successfully copy wx-format html to clipboard.");
-	}).catch(e => {
-		console.log("clipboardy.write error: "+e);
-	});
-});
+const source = fs.readFileSync(input, 'utf8');
+var output = marked(source, {
+	renderer: wxRenderer.getRenderer()
+})
+if (wxRenderer.hasFootnotes()) {
+	output += wxRenderer.buildFootnotes()
+}
+
+function copy() {
+	return new Promise(async (resolve, reject) => {
+		const browser = await puppeteer.launch({});
+		let page = await browser.newPage();
+
+		try {
+			await page.setContent('<div id="output">' + output + '</div>');
+
+			const result = await page.evaluate(() => {
+				function copyText(selector) {
+					var clipboardDiv = document.querySelector(selector);
+					clipboardDiv.focus();
+					window.getSelection().removeAllRanges();
+					var range = document.createRange();
+					range.setStartBefore(clipboardDiv.firstChild);
+					range.setEndAfter(clipboardDiv.lastChild);
+					window.getSelection().addRange(range);
+
+					try {
+						if (document.execCommand('Copy')) {
+							console.log("Successfully copy wx-format html to clipboard.");
+							return copyText.value;
+						} else {
+							console.log("Successfully copy wx-format html to clipboard in degrade mode.");
+							return output
+						}
+					} catch (err) {
+						console.log("Successfully copy wx-format html to clipboard in degrade mode.");
+						return output
+					}
+				}
+				return copyText("#output");
+			});
+			// 结束
+			browser.close();
+			return resolve();
+		} catch (e) {
+
+			// 结束
+			browser.close();
+			return reject(e);
+		}
+	})
+}
+copy();
