@@ -13,6 +13,16 @@ npm install wechat-format-cli && cd ./node_modules/wechat-format-cli && npm star
 </pre>
 3. Ctrl/Command + V 到微信公众号编辑器
 
+> 1.1.0 版本依赖 puppeteer，若安装失败可以参考[这里](https://github.com/cnpm/cnpmjs.org/issues/1246#issuecomment-359148058)
+
+## CHANGELOG
+
+<details>
+<summary>1.1.0</summary>
+</br>
+<p>1. 利用 puppeteer 实现复制 html，替换原来纯文本带标签的方式</p>
+</details>
+
 ## 优点
 
 - 继承了[微信公众号排版编辑器](https://github.com/lyricat/wechat-format)的优点（当然也有 bug。。）
