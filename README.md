@@ -22,10 +22,11 @@ npm install wechat-format-cli && cd ./node_modules/wechat-format-cli && npm star
 1. 安装：`npm install wechat-format-cli -g`
 2. 打开命令行执行：`wechat-format-cli [your_md_path.md]`
 3. Ctrl/Command + V 到微信公众号编辑器
+
 ## CHANGELOG
 
 <details>
-<summary>1.1.1</summary>
+<summary>1.1.2</summary>
 </br>
 <p>1. 支持全局安装</b></p>
 </details>
