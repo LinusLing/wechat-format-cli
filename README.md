@@ -6,6 +6,10 @@
 
 > 前提：确保已经安装 npm。[如何安装 npm（安装 node.js 会自带 npm）](http://www.runoob.com/nodejs/nodejs-install-setup.html)
 
+> 1.1.0 版本起已依赖 puppeteer，若安装失败可以参考[这里](https://github.com/cnpm/cnpmjs.org/issues/1246#issuecomment-359148058)
+
+#### 原始方法
+
 1. 打开 Terminal
 2. 执行如下脚本
 <pre>
@@ -13,9 +17,18 @@ npm install wechat-format-cli && cd ./node_modules/wechat-format-cli && npm star
 </pre>
 3. Ctrl/Command + V 到微信公众号编辑器
 
-> 1.1.0 版本依赖 puppeteer，若安装失败可以参考[这里](https://github.com/cnpm/cnpmjs.org/issues/1246#issuecomment-359148058)
+#### 全局方法
 
+1. 安装：`npm install wechat-format-cli -g`
+2. 打开命令行执行：`wechat-format-cli [your_md_path.md]`
+3. Ctrl/Command + V 到微信公众号编辑器
 ## CHANGELOG
+
+<details>
+<summary>1.1.1</summary>
+</br>
+<p>1. 支持全局安装</b></p>
+</details>
 
 <details>
 <summary>1.1.0</summary>
@@ -28,6 +41,7 @@ npm install wechat-format-cli && cd ./node_modules/wechat-format-cli && npm star
 - 继承了[微信公众号排版编辑器](https://github.com/lyricat/wechat-format)的优点（当然也有 bug。。）
 - 不需要网页编辑
 - 生成后的微信特制 HTML 直接复制到粘贴板，打开微信公众号编辑器直接粘贴
+- 可以为**[微信公众号的自动发布文章](https://github.com/LinusLing/WeChatMediaPlatformAutomation)**提供内容
 
 ## 关于我
 
