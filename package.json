@@ -12,7 +12,7 @@
     "url": "git+https://github.com/LinusLing/wechat-format-cli.git"
   },
   "dependencies": {
-    "marked": "^0.6.3",
+    "marked": "^0.7.0",
     "minimist": "^1.2.2",
     "puppeteer": "^4.0.0"
   },
