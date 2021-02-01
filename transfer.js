@@ -49,13 +49,16 @@ function copy() {
 					window.getSelection().addRange(range);
 
 					try {
+						var ret_text = undefined
 						if (document.execCommand('Copy')) {
 							console.log("Successfully copy wx-format html to clipboard.");
-							return copyText.value;
-						} else {
+							ret_text = copyText.value;
+						}
+						if (ret_text == undefined) {
 							console.log("Successfully copy wx-format html to clipboard in degrade mode.");
 							return output
 						}
+						return ret_text
 					} catch (err) {
 						console.log("Successfully copy wx-format html to clipboard in degrade mode.");
 						return output

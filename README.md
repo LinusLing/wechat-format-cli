@@ -26,6 +26,12 @@ npm install wechat-format-cli && cd ./node_modules/wechat-format-cli && npm star
 ## CHANGELOG
 
 <details>
+<summary>1.1.3</summary>
+</br>
+<p>1. 修复执行完 Copy 操作但无内容的 bug</b></p>
+</details>
+
+<details>
 <summary>1.1.2</summary>
 </br>
 <p>1. 支持全局安装</b></p>
