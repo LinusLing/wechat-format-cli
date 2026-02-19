@@ -14,7 +14,7 @@
   "dependencies": {
     "marked": "^4.0.10",
     "minimist": "^1.2.2",
-    "puppeteer": "^4.0.0"
+    "puppeteer": "^24.37.5"
   },
   "keywords": [
     "markdown",
